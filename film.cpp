@@ -72,7 +72,7 @@ Film createNewFilmFromUserInput() {
 
     cout << "Enter the quality (1-10): ";
     cin >> newFilm.quality;
-    cin.ignore(); // очистка буфера после числового ввода
+    cin.ignore(); 
 
     newFilm.series_quantity = 1.0;
 
