@@ -38,7 +38,7 @@ Film createNewFilmFromUserInput() {
 
     cout << "\n-------------------- CREATE NEW FILM --------------------\n";
 
-    cin.ignore(); // очистка буфера перед первым getline
+    cin.ignore(); 
 
     cout << "Enter the name film: ";
     cin.getline(buffer, 256);
@@ -72,7 +72,7 @@ Film createNewFilmFromUserInput() {
 
     cout << "Enter the quality (1-10): ";
     cin >> newFilm.quality;
-    cin.ignore(); // очистка буфера после числового ввода
+    cin.ignore(); 
 
     newFilm.series_quantity = 1.0;
 
