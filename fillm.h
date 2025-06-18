@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstring>
+
 struct Film {
     char* name = nullptr;
     char* author = nullptr;
@@ -12,18 +14,13 @@ struct Film {
 };
 
 
-Film createNewFilm(const char* name, const char* author, const char* genre, const char* description, const char* date, int quality);
-
-
+Film createNewFilm(const char*, const char*, const char*, const char*, const char*, int);
 Film createNewFilmFromUserInput();
-
-
-void printFilm(const Film& film);
-
-
-void printFilms(Film* films, int size);
-
-void deleteFilm(Film& film);
-
-// Освобождает память всех фильмов в массиве
-void deleteFilms(Film* films, int size);
+void printFilm(const Film&);
+void deleteFilm(Film&);
+void addFilm(Film*&, int&, const Film&);
+void printAllFilms(const Film*, int);
+void printFilmByIndex(const Film*, int);
+void deleteFilmByIndex(Film*&, int&);
+void deleteAllFilms(Film*&, int&);
+void searchFilms(const Film*, int);
